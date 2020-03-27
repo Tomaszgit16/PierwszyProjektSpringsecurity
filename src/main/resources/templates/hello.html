@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"> <!-- xmlns przestrzeń naz by mi podpowiadalo składnię -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Hello: <span th:text="${name}"/>
+Details: <span th:text="${details}"/>
+Your Role:
+
+<table>
+    <th:block th:each="auth : ${authorities}">
+        <tr>
+            <td th:text="${auth}">...</td>
+    </tr>
+    </th:block>
+</table>
+
+
+</body>
+</html>
